@@ -1,0 +1,42 @@
+# 🔒 Environment files (API keys, secrets)
+.env
+.env.local
+.env.development
+.env.production
+.env.*.local
+Backend/.env
+Frontend/.env
+openai_api_key.txt
+*.key
+*.pem
+
+# 🧱 Node.js dependencies
+node_modules/
+Backend/node_modules/
+Frontend/node_modules/
+
+# ⚙️ Build and cache outputs
+dist/
+build/
+.cache/
+.temp/
+out/
+.next/
+.vercel/
+
+# 🧪 Logs and runtime files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 💾 OS and IDE stuff
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 🧠 Optional: AI-related caches (e.g., if SDK stores local cache)
+.openai/
+.gemini/
