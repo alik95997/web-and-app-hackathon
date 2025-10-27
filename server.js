@@ -1,19 +1,20 @@
-import express from "express";
+
 import dotenv from "dotenv";
+import cloudinary from "./config/cloudinary.js"
+dotenv.config();
+import express, { urlencoded } from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import fileRoutes from "./routes/fileRoutes.js";
 import aiRoutes from "./routes/aiRoutes.js";
 import vitalsRoutes from "./routes/vitalsRoutes.js";
-dotenv.config();
-
 connectDB();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use(express.urlencoded({ extended: true }))
 app.use("/api/auth", authRoutes);
 app.use("/api/files", fileRoutes);
 app.use("/api/ai", aiRoutes);
